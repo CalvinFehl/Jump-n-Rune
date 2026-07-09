@@ -7,7 +7,6 @@ public class LeafTipBehaviour : MonoBehaviour
     [SerializeField] private Transform MoveGoalTransform;
     [SerializeField] public Vector3 MoveForce;
     [SerializeField] public float MoveForceMagnitude = 120;
-    [SerializeField] private float massChangeDuration;
     [SerializeField] public bool ForceIsActive;
 
     void Start()
