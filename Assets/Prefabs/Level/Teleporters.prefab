@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7255527605535961629}
   - component: {fileID: 2078877661563382459}
   - component: {fileID: 7410596571116482188}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48,7 +48,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 305471839384926962}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -101,7 +101,7 @@ GameObject:
   - component: {fileID: 2925001654057870341}
   - component: {fileID: 2827565751714559460}
   - component: {fileID: 7426164877502920180}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Teleporter_A
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -117,8 +117,8 @@ Transform:
   m_GameObject: {fileID: 2840001473472614482}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: -18.5}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalPosition: {x: -10.6, y: -7.3, z: 103.9}
+  m_LocalScale: {x: 150, y: 2, z: 300}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7255527605535961629}
@@ -158,7 +158,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 7949883120260516512}
-  OrientWithDestination: 1
+  OrientWithDestination: 0
 --- !u!1 &5033272124065647672
 GameObject:
   m_ObjectHideFlags: 0
@@ -168,7 +168,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1902549914488487656}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Teleporters
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -203,7 +203,7 @@ GameObject:
   - component: {fileID: 6542461687769690022}
   - component: {fileID: 4908332142199052757}
   - component: {fileID: 7949883120260516512}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Teleporter_B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -218,14 +218,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5974533670379538796}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 2, z: 16}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -8.6, y: 2.2, z: 0.39999998}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3092819880364682556}
   m_Father: {fileID: 1902549914488487656}
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &4908332142199052757
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -259,8 +259,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4dd6e1ccacd1ff74e9d99a46dca9bd8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destination: {fileID: 7426164877502920180}
-  OrientWithDestination: 0
+  destination: {fileID: 0}
+  OrientWithDestination: 1
 --- !u!1 &8540727520412031961
 GameObject:
   m_ObjectHideFlags: 0
@@ -272,7 +272,7 @@ GameObject:
   - component: {fileID: 3092819880364682556}
   - component: {fileID: 3725071279141967915}
   - component: {fileID: 7016648176247827338}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -288,7 +288,7 @@ Transform:
   m_GameObject: {fileID: 8540727520412031961}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: 0}
+  m_LocalPosition: {x: 0, y: 0.5, z: 1.8000001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -309,7 +309,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8540727520412031961}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
