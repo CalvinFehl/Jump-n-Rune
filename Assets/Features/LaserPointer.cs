@@ -6,7 +6,7 @@ public class LaserPointer : MonoBehaviour
     [SerializeField] private LineRenderer lineRenderer;
     [SerializeField] private float maxDistance = 30f;
     [SerializeField] private bool laserActive = true;
-    [SerializeField] public Vector3 laserHitPos;
+    [SerializeField] public Vector3 laserHitPos, laserHitNormal;
 
     private void Start()
     {
@@ -44,6 +44,7 @@ public class LaserPointer : MonoBehaviour
                 lineRenderer.SetPosition(0, laserOrigin.position);
                 lineRenderer.SetPosition(1, hit.point);
                 laserHitPos = hit.point;
+                laserHitNormal = hit.normal;
             }
             else
             {
