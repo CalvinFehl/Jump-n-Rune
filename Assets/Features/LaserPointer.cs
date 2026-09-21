@@ -2,11 +2,18 @@ using UnityEngine;
 
 public class LaserPointer : MonoBehaviour
 {
+    [Header("References")]
     [SerializeField] private Transform cameraTransform, rayOrigin, laserOrigin;
     [SerializeField] private LineRenderer lineRenderer;
+
+    [Header("Settings")]
     [SerializeField] private float maxDistance = 30f;
     [SerializeField] private bool laserActive = true;
-    [SerializeField] public Vector3 laserHitPos, laserHitNormal;
+    
+    [Header("Public Runtime Variables")]
+    public Vector3 LaserHitPos, LaserHitNormal;
+    public GameObject LaserHitObject;
+
 
     private void Start()
     {
@@ -43,14 +50,15 @@ public class LaserPointer : MonoBehaviour
             {
                 lineRenderer.SetPosition(0, laserOrigin.position);
                 lineRenderer.SetPosition(1, hit.point);
-                laserHitPos = hit.point;
-                laserHitNormal = hit.normal;
+                LaserHitPos = hit.point;
+                LaserHitNormal = hit.normal;
+                LaserHitObject = hit.collider.gameObject;
             }
             else
             {
                 lineRenderer.SetPosition(0, laserOrigin.position);
                 lineRenderer.SetPosition(1, ray.origin + ray.direction * maxDistance);
-                laserHitPos = ray.origin + ray.direction * maxDistance;
+                LaserHitPos = ray.origin + ray.direction * maxDistance;
             }
         }
         else

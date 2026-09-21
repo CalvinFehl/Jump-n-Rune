@@ -18,7 +18,7 @@ public class LeafTipBehaviour : MonoBehaviour
 
     [Header("Runtime Variables")]
     [SerializeField] public Vector3 MoveForce;
-    [SerializeField] public bool ForceIsActive;
+    [SerializeField] public bool ForceIsActive, WillCheckLineOfSight;
     private float lastSightlineCheckTime;
 
     void Start()
@@ -31,7 +31,7 @@ public class LeafTipBehaviour : MonoBehaviour
 
     public void ToggleMoveForce(bool activate, Transform moveGoalTransform = null)
     {
-        ForceIsActive = activate;
+        WillCheckLineOfSight = activate;
         if (moveGoalTransform != null)
         {
             MoveGoalTransform = moveGoalTransform;
@@ -45,7 +45,7 @@ public class LeafTipBehaviour : MonoBehaviour
             if (lastSightlineCheckTime + sightlineChecks < Time.time)
             {
                 lastSightlineCheckTime = Time.time;
-                ForceIsActive = CheckLineOfSight();
+                if (WillCheckLineOfSight) ForceIsActive = CheckLineOfSight();
             }
         }
 

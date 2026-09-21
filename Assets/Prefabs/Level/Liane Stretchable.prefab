@@ -574,7 +574,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   leafTipRB: {fileID: 2791524743650783724}
   MoveGoalTransform: {fileID: 0}
+  maxAffectedDistance: 30
   turnsTowardsGoal: 1
+  sightlineChecks: 2
   MoveForceMagnitude: 120
   TurnForceMagnitude: 120
   MoveForce: {x: 0, y: 120, z: 0}
