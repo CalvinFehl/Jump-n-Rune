@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: M_Leaves_01
-  m_Shader: {fileID: -6465566751694194690, guid: 2d0fc51c397aec947b7b087ef6b2a4c0, type: 3}
+  m_Name: M_Bark_02
+  m_Shader: {fileID: -6465566751694194690, guid: feb5b32df9b77274191b45e35479c763, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -48,10 +48,6 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _Input_Texture:
-        m_Texture: {fileID: 2800000, guid: 4a1a4e6eb95d48844bb2be64fb00abb7, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -66,10 +62,6 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _ParallaxMap:
         m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _SampleTexture2D_d4560fc4d05b411b8d84022d3f4a649a_Texture_1_Texture2D:
-        m_Texture: {fileID: 2800000, guid: 4a1a4e6eb95d48844bb2be64fb00abb7, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
@@ -109,7 +101,7 @@ Material:
     - _Glossiness: 0
     - _GlossyReflections: 0
     - _Metallic: 0
-    - _Normal_Strength: 0.07
+    - _Normal_Strength: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.005
     - _QueueControl: 0
@@ -127,12 +119,13 @@ Material:
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Color_Leaves: {r: 0.8301887, g: 0.003915994, b: 0.23653507, a: 1}
+    - _Color_Bark: {r: 0.2830189, g: 0.17676902, b: 0.11881453, a: 1}
+    - _Color_Bark_1: {r: 0.40392157, g: 0.15686275, b: 0.1864626, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
---- !u!114 &1436431935643865959
+--- !u!114 &1412781525726257255
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
