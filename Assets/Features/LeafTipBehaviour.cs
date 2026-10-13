@@ -73,7 +73,8 @@ public class LeafTipBehaviour : MonoBehaviour
             return false;
         }
 
-        Physics.Raycast(MoveGoalTransform.position, (transform.position - MoveGoalTransform.position).normalized, out RaycastHit hitInfo);
+        Physics.Raycast(MoveGoalTransform.position, (transform.position - MoveGoalTransform.position).normalized, out RaycastHit hitInfo, maxAffectedDistance, ~LayerMask.GetMask("Plant"));
+
         if (hitInfo.collider != null && hitInfo.collider.transform != this.transform)
         {
             return false;
