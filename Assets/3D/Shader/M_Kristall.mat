@@ -141,8 +141,9 @@ Material:
     - _Color: {r: 0.21176472, g: 0.16078432, b: 0.3137255, a: 1}
     - _Color_1: {r: 0, g: 0.9329294, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _Moos_Color: {r: 0.018111428, g: 0.04175675, b: 0.3490566, a: 1}
-    - _Moos_Color_1: {r: 0.1745283, g: 0.62866855, b: 1, a: 1}
+    - _Emissive: {r: 0, g: 0, b: 0, a: 1}
+    - _Moos_Color: {r: 0.23362409, g: 0.28728756, b: 0.6603774, a: 1}
+    - _Moos_Color_1: {r: 0.7688679, g: 0.8954402, b: 1, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
