@@ -26,7 +26,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.829, y: 0, z: 0}
-  m_LocalScale: {x: 7.92, y: 7.92, z: 7.92}
+  m_LocalScale: {x: 15.95, y: 15.95, z: 15.95}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 8206395661944484296}
@@ -150,8 +150,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   target: {fileID: 0}
-  bendStrength: 1
-  influenceRadius: 1
+  bendStrength: 3
+  influenceRadius: 40
   material: {fileID: 2100000, guid: 1b1aa40aec84e9c459aa922ecf71da99, type: 2}
 --- !u!1001 &1367035013248372326
 PrefabInstance:
@@ -256,8 +256,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   target: {fileID: 0}
-  bendStrength: 1
-  influenceRadius: 1
+  bendStrength: 3
+  influenceRadius: 40
   material: {fileID: 2100000, guid: 1b1aa40aec84e9c459aa922ecf71da99, type: 2}
 --- !u!1001 &2074580195322535973
 PrefabInstance:
@@ -357,8 +357,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   target: {fileID: 0}
-  bendStrength: 1
-  influenceRadius: 1
+  bendStrength: 3
+  influenceRadius: 40
   material: {fileID: 2100000, guid: 1b1aa40aec84e9c459aa922ecf71da99, type: 2}
 --- !u!4 &1963810021452007374 stripped
 Transform:
@@ -468,8 +468,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   target: {fileID: 0}
-  bendStrength: 1
-  influenceRadius: 1
+  bendStrength: 3
+  influenceRadius: 40
   material: {fileID: 2100000, guid: 1b1aa40aec84e9c459aa922ecf71da99, type: 2}
 --- !u!1001 &2631058372226068738
 PrefabInstance:
@@ -574,8 +574,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   target: {fileID: 0}
-  bendStrength: 1
-  influenceRadius: 1
+  bendStrength: 3
+  influenceRadius: 40
   material: {fileID: 2100000, guid: 1b1aa40aec84e9c459aa922ecf71da99, type: 2}
 --- !u!1001 &3581352166517197129
 PrefabInstance:
@@ -680,8 +680,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   target: {fileID: 0}
-  bendStrength: 1
-  influenceRadius: 1
+  bendStrength: 3
+  influenceRadius: 40
   material: {fileID: 2100000, guid: 1b1aa40aec84e9c459aa922ecf71da99, type: 2}
 --- !u!1001 &4597091847018987844
 PrefabInstance:
@@ -781,8 +781,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   target: {fileID: 0}
-  bendStrength: 1
-  influenceRadius: 1
+  bendStrength: 3
+  influenceRadius: 40
   material: {fileID: 2100000, guid: 1b1aa40aec84e9c459aa922ecf71da99, type: 2}
 --- !u!4 &4055104233749620399 stripped
 Transform:
@@ -887,8 +887,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   target: {fileID: 0}
-  bendStrength: 1
-  influenceRadius: 1
+  bendStrength: 3
+  influenceRadius: 40
   material: {fileID: 2100000, guid: 1b1aa40aec84e9c459aa922ecf71da99, type: 2}
 --- !u!4 &5336068285659089068 stripped
 Transform:
@@ -993,8 +993,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   target: {fileID: 0}
-  bendStrength: 1
-  influenceRadius: 1
+  bendStrength: 3
+  influenceRadius: 40
   material: {fileID: 2100000, guid: 1b1aa40aec84e9c459aa922ecf71da99, type: 2}
 --- !u!4 &5322965729737623741 stripped
 Transform:
@@ -1104,8 +1104,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   target: {fileID: 0}
-  bendStrength: 1
-  influenceRadius: 1
+  bendStrength: 3
+  influenceRadius: 40
   material: {fileID: 2100000, guid: 1b1aa40aec84e9c459aa922ecf71da99, type: 2}
 --- !u!1001 &7405212133371754611
 PrefabInstance:
@@ -1210,8 +1210,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   target: {fileID: 0}
-  bendStrength: 1
-  influenceRadius: 1
+  bendStrength: 3
+  influenceRadius: 40
   material: {fileID: 2100000, guid: 1b1aa40aec84e9c459aa922ecf71da99, type: 2}
 --- !u!1001 &7460658111071073386
 PrefabInstance:
@@ -1316,8 +1316,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   target: {fileID: 0}
-  bendStrength: 1
-  influenceRadius: 1
+  bendStrength: 3
+  influenceRadius: 40
   material: {fileID: 2100000, guid: 1b1aa40aec84e9c459aa922ecf71da99, type: 2}
 --- !u!1001 &7908971101909755963
 PrefabInstance:
@@ -1417,8 +1417,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   target: {fileID: 0}
-  bendStrength: 1
-  influenceRadius: 1
+  bendStrength: 3
+  influenceRadius: 40
   material: {fileID: 2100000, guid: 1b1aa40aec84e9c459aa922ecf71da99, type: 2}
 --- !u!4 &7658641840326070224 stripped
 Transform:
@@ -1528,8 +1528,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   target: {fileID: 0}
-  bendStrength: 1
-  influenceRadius: 1
+  bendStrength: 3
+  influenceRadius: 40
   material: {fileID: 2100000, guid: 1b1aa40aec84e9c459aa922ecf71da99, type: 2}
 --- !u!1001 &8549370095984768594
 PrefabInstance:
@@ -1634,8 +1634,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   target: {fileID: 0}
-  bendStrength: 1
-  influenceRadius: 1
+  bendStrength: 3
+  influenceRadius: 40
   material: {fileID: 2100000, guid: 1b1aa40aec84e9c459aa922ecf71da99, type: 2}
 --- !u!1001 &8714391815083392123
 PrefabInstance:
@@ -1735,8 +1735,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   target: {fileID: 0}
-  bendStrength: 1
-  influenceRadius: 1
+  bendStrength: 3
+  influenceRadius: 40
   material: {fileID: 2100000, guid: 1b1aa40aec84e9c459aa922ecf71da99, type: 2}
 --- !u!4 &9179748166321347472 stripped
 Transform:
