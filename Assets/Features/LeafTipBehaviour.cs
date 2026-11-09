@@ -8,11 +8,10 @@ public class LeafTipBehaviour : MonoBehaviour
     [SerializeField] private Transform MoveGoalTransform;
     [SerializeField] private LineRenderer lineRenderer;
 
-    [Header("Settings")]
-    [SerializeField] private List<Transform> segments;
-    [SerializeField] private float startWidth = 1f, endWidth = 0.4f;
+    [Header("LineRendererSettings")]
     [Tooltip("Update each X-th frame")]
     [SerializeField] private int updateRate = 3;
+    [SerializeField] private List<Transform> segments;
 
     [Header("Force Settings")]
     [SerializeField] private float maxAffectedDistance = 10f;
@@ -44,13 +43,6 @@ public class LeafTipBehaviour : MonoBehaviour
             if (lineRenderer?.positionCount != segments.Count) 
             {
                 lineRenderer.positionCount = segments.Count;
-
-                lineRenderer.widthCurve.ClearKeys();
-                lineRenderer.widthCurve.SetKeys(new[]
-                {
-                    new Keyframe(0f, startWidth),
-                    new Keyframe(1f, endWidth)
-                });
             }            
         }
     }
