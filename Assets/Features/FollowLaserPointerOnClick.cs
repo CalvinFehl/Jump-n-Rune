@@ -23,7 +23,7 @@ public class FollowLaserPointerOnClick : MonoBehaviour
         if (Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame)
         {
             transform.parent = null;
-            Debug.Log("You got Batman'd! No Parents");
+            //Debug.Log("You got Batman'd! No Parents");
             isFollowing = !isFollowing;
 
             target.position = laserPointer.LaserHitPos;
@@ -40,7 +40,7 @@ public class FollowLaserPointerOnClick : MonoBehaviour
                 if (laserPointer.LaserHitObject != null && laserPointer.LaserHitObject.CompareTag("Sticky"))
                 {
                     transform.parent = laserPointer.LaserHitObject.transform;
-                    Debug.Log("Entered Sticky");
+                    //Debug.Log("Entered Sticky");
                 }
             }
         }
