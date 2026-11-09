@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class LeafTipBehaviour : MonoBehaviour
@@ -5,6 +6,13 @@ public class LeafTipBehaviour : MonoBehaviour
     [Header("References")]
     [SerializeField] private Rigidbody leafTipRB;
     [SerializeField] private Transform MoveGoalTransform;
+    [SerializeField] private LineRenderer lineRenderer;
+
+    [Header("Settings")]
+    [SerializeField] private List<Transform> segments;
+    [SerializeField] private float startWidth = 1f, endWidth = 0.4f;
+    [Tooltip("Update each X-th frame")]
+    [SerializeField] private int updateRate = 3;
 
     [Header("Force Settings")]
     [SerializeField] private float maxAffectedDistance = 10f;
@@ -20,12 +28,30 @@ public class LeafTipBehaviour : MonoBehaviour
     [SerializeField] public Vector3 MoveForce;
     [SerializeField] public bool ForceIsActive, WillCheckLineOfSight;
     private float lastSightlineCheckTime;
+    private int frameCounter = 0;
 
     void Start()
     {
         if (leafTipRB == null)
         {
             leafTipRB = GetComponent<Rigidbody>();
+        }
+
+        if (lineRenderer == null)
+        {
+            lineRenderer = GetComponent<LineRenderer>();
+
+            if (lineRenderer?.positionCount != segments.Count) 
+            {
+                lineRenderer.positionCount = segments.Count;
+
+                lineRenderer.widthCurve.ClearKeys();
+                lineRenderer.widthCurve.SetKeys(new[]
+                {
+                    new Keyframe(0f, startWidth),
+                    new Keyframe(1f, endWidth)
+                });
+            }            
         }
     }
 
@@ -57,6 +83,22 @@ public class LeafTipBehaviour : MonoBehaviour
             if (turnsTowardsGoal)
             {
                 //Hier Code aus Hoverboard einfügen
+            }
+        }
+    }
+
+    private void LateUpdate()
+    {
+        if (lineRenderer != null && segments.Count > 1)
+        {
+            frameCounter++;
+            if (frameCounter >= updateRate)
+            {
+                frameCounter = 0;
+                for (int i = 0; i < segments.Count; i++)
+                {
+                    lineRenderer.SetPosition(i, segments[i].position);
+                }
             }
         }
     }
