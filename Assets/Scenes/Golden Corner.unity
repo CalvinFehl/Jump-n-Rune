@@ -707,11 +707,11 @@ PrefabInstance:
     - target: {fileID: 1301907644769985385, guid: aa8162d03eb1c9643a6119843ceb1271, type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 1656853396}
+      objectReference: {fileID: 1656182764}
     - target: {fileID: 5970380737639799787, guid: aa8162d03eb1c9643a6119843ceb1271, type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 1656853396}
+      objectReference: {fileID: 1656182764}
     - target: {fileID: 6390322196709068567, guid: aa8162d03eb1c9643a6119843ceb1271, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.26
@@ -2287,7 +2287,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 13
   m_Type: 2
-  m_Color: {r: 0.95686275, g: 0.6119002, b: 0.57254905, a: 1}
+  m_Color: {r: 0.95686275, g: 0.8961894, b: 0.57254905, a: 1}
   m_Intensity: 6.07
   m_Range: 7.4172297
   m_SpotAngle: 30
@@ -8977,7 +8977,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -0.282, z: 0}
-  m_LocalScale: {x: 4, y: 0.1, z: 4}
+  m_LocalScale: {x: 3.57572, y: 0.089393005, z: 3.57572}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1126269569}
@@ -16224,7 +16224,7 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1653685256}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!43 &1656853396
+--- !u!43 &1656182764
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -18137,7 +18137,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6814286433173976617, guid: b80cf779579a70543b193d40d12d91ac, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.53
+      value: -2.55
       objectReference: {fileID: 0}
     - target: {fileID: 6814286433173976617, guid: b80cf779579a70543b193d40d12d91ac, type: 3}
       propertyPath: m_LocalPosition.y
@@ -18145,7 +18145,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6814286433173976617, guid: b80cf779579a70543b193d40d12d91ac, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.5500002
+      value: 2.22
       objectReference: {fileID: 0}
     - target: {fileID: 6814286433173976617, guid: b80cf779579a70543b193d40d12d91ac, type: 3}
       propertyPath: m_LocalRotation.w
@@ -18179,6 +18179,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: fdc048814590f0b499b1a4714f0b0502, type: 2}
+    - target: {fileID: 8617836990254838502, guid: b80cf779579a70543b193d40d12d91ac, type: 3}
+      propertyPath: updateRate
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8617836990254838502, guid: b80cf779579a70543b193d40d12d91ac, type: 3}
       propertyPath: lineRenderer
       value: 

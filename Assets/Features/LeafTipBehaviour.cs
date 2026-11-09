@@ -40,11 +40,16 @@ public class LeafTipBehaviour : MonoBehaviour
         {
             lineRenderer = GetComponent<LineRenderer>();
 
-            if (lineRenderer?.positionCount != segments.Count) 
-            {
-                lineRenderer.positionCount = segments.Count;
-            }            
+          
         }
+        
+        if (lineRenderer?.positionCount != segments.Count) 
+        {
+            lineRenderer.positionCount = segments.Count;
+        }  
+
+        frameCounter = updateRate;
+        CalculateLineRenderer();
     }
 
     public void ToggleMoveForce(bool activate, Transform moveGoalTransform = null)
@@ -77,9 +82,11 @@ public class LeafTipBehaviour : MonoBehaviour
                 //Hier Code aus Hoverboard einfügen
             }
         }
+
+        CalculateLineRenderer();
     }
 
-    private void LateUpdate()
+    private void CalculateLineRenderer()
     {
         if (lineRenderer != null && segments.Count > 1)
         {
