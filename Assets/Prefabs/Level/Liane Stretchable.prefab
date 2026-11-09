@@ -587,6 +587,8 @@ MonoBehaviour:
   maxAffectedDistance: 30
   turnsTowardsGoal: 1
   sightlineChecks: 0.3
+  reactionSpeed: 1.2
+  forceTreshold: 0.1
   MoveForceMagnitude: 120
   TurnForceMagnitude: 120
   MoveForce: {x: 0, y: 120, z: 0}

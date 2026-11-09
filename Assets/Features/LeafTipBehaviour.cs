@@ -19,7 +19,9 @@ public class LeafTipBehaviour : MonoBehaviour
     [SerializeField] private bool turnsTowardsGoal = true;
     [Tooltip("If greater than 0, the leaf tip will check for line of sight to the MoveGoalTransform in an intervall before applying force.")]
     [SerializeField] private float sightlineChecks = -1f;
-    [SerializeField] private float forceEaseInDuration = 0.5f, forceEaseOutDuration = 0f;
+    [SerializeField] private float reactionSpeed = 0.02f;
+    [SerializeField] private float forceTreshold = 0.1f;
+    // forceEaseInDuration = 0.5f, forceEaseOutDuration = 0f;
 
     [SerializeField] public float MoveForceMagnitude = 120;
     [SerializeField] public float TurnForceMagnitude = 120;
@@ -27,7 +29,7 @@ public class LeafTipBehaviour : MonoBehaviour
     [Header("Runtime Variables")]
     [SerializeField] public Vector3 MoveForce;
     [SerializeField] public bool ForceIsActive, WillCheckLineOfSight;
-    [SerializeField] private float forceEaseMultiplier;
+    // [SerializeField] private float forceEaseMultiplier;
     private float lastSightlineCheckTime;
     private Vector3 lastMoveForce;
     private int frameCounter = 0;
@@ -77,46 +79,20 @@ public class LeafTipBehaviour : MonoBehaviour
 
         if (leafTipRB != null && MoveGoalTransform != null)
         {
-            if (ForceIsActive)
+            Vector3 thisFrameForce = ForceIsActive ? (MoveGoalTransform.position - transform.position).normalized * MoveForceMagnitude : Vector3.zero;
+
+            Vector3 newForce = lastMoveForce * (1 - reactionSpeed * Time.deltaTime) + thisFrameForce * reactionSpeed * Time.deltaTime ;
+            
+            lastMoveForce = newForce;
+
+            if (lastMoveForce.magnitude > forceTreshold)
             {
-                Vector3 moveDirection = (MoveGoalTransform.position - transform.position).normalized;
-
-                if (forceEaseInDuration > 0f)
-                {
-
-                    if (forceEaseMultiplier < 1f)
-                    {
-                        forceEaseMultiplier += (1 / forceEaseInDuration) * Time.fixedDeltaTime;
-                    }
-                    else
-                    {
-                        forceEaseMultiplier = 1f;
-                    }
-                }
-
-                lastMoveForce = moveDirection * MoveForceMagnitude;
-
-                leafTipRB.AddForce(lastMoveForce * forceEaseMultiplier);
-
-                if (turnsTowardsGoal)
-                {
-                    //Hier Code aus Hoverboard einfügen
-                }
+                leafTipRB.AddForce(newForce);                
             }
-            else
+
+            if (turnsTowardsGoal)
             {
-                if (forceEaseOutDuration > 0f)
-                {
-                    if (forceEaseMultiplier > 0f)
-                    {
-                        forceEaseMultiplier -= (1 / forceEaseOutDuration) * Time.fixedDeltaTime;
-                    }
-                    else
-                    {
-                        forceEaseMultiplier = 0f;
-                    }
-                }
-                leafTipRB.AddForce(lastMoveForce * forceEaseMultiplier);
+                //Hier Code aus Hoverboard einfügen
             }
         }
 
